@@ -18,8 +18,8 @@ The goals of this challenge are to:
 ## Resources
 Data: hawaii.sqlite (file provided)
 
-Python 3.7.7
-Jupyter Notebook
+Python 3.7.7<br>
+Jupyter Notebook<br>
 Modules/Libraries:  sqlalchemy, pandas, matplotlib, numpy, datetime
 
 Note:  a starter .ipynb was provided with dependencies & psuedocode to walk through the week's modules
@@ -41,7 +41,7 @@ The descriptive statistics for Temperture data are shown in table format.<br>
 
 One of the best ways to compare 2 sets of data is a bar chart.<br>
 
-![](analysis/TempChart.PNG) 
+![](analysis/TempChart.png) 
 
 #### Observations:
 
@@ -57,7 +57,7 @@ The descriptive statistics for Temperture data are shown in table format.<br>
 
 One of the best ways to compare 2 sets of data is a bar chart.<br>
 
-![](analysis/PrecipChart.PNG) 
+![](analysis/PrecipChart.png) 
 
 #### Observations:
 
@@ -66,6 +66,7 @@ key differences in weather between June and December
 ## Recommendations for Future Analysis
 
 Need 2-3
-Due to the fact that the means and 3rd quartiles of Precipitation data for both June & Dec are much lower than the max values, it would be prudent to investigate outliers in the data.  I would create box and whisker plots to visualize this data 
+1. Due to the fact that the means and 3rd quartiles of Precipitation data for both June & Dec are much lower than the max values, it would be prudent to investigate outliers in the data.  I would create box and whisker plots to visualize this data.
+2. It would be nice to have this same analysis for additional months.  At a minimum, I would add 2 months to display descriptive statistics of "all 4 seasons."
 
 
