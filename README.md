@@ -41,7 +41,7 @@ The descriptive statistics for Temperture data are shown in table format.<br>
 
 One of the best ways to compare 2 sets of data is a bar chart.<br>
 
-![](analysis/Tempschart.png) 
+![](analysis/TempsChart.png) 
 
 #### Observations:
 
