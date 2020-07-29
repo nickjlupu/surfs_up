@@ -28,7 +28,7 @@ Note:  a starter .ipynb was provided with dependencies & psuedocode to walk thro
 ## Analysis 
 Data is provided in the form of an sqlite file/database.  This existing database is reflected into our new model.  We pull these tables into pandas dataframes for explatory analysis.  Queries and filters are used to extract data to answer questions posed in the modules.  Histograms are created and reviewed.  
 
-For the challenge activity, I pulled the data from the Measurement class into a pandas df with the read_sql_query function.  Once in the df, I used DatetimeIndex to pull the month out of the date column and put into a new column as an integer.  With this information, we can create df's for June & December respectively by using the .loc function.  Next, df's are created with .describe() to obtain descriptive statistics for both months for temperature and precipitation.  These df's are concatonated and cleaned up to summarize and to plot bar charts.
+For the challenge activity, I pulled the data from the Measurement class into a pandas df with the read_sql_query function.  Once in the df, I used DatetimeIndex to pull the month out of the date column and put into a new column as an integer.  With this information, we can create df's for June & December respectively by using the .loc function.  Next, df's are created with .describe() to obtain descriptive statistics for both months for temperature and precipitation.  These df's are concatenated and cleaned up to summarize and to plot bar charts.
 
 All code found in the Jupyter Notebook file: [climate_analysis.ipynb](climate_analysis.ipynb)
 
@@ -51,10 +51,13 @@ One of the best ways to compare 2 sets of data is a bar chart.<br>
   * However, most of the December temperatures are above 69°F (1st quartile).
 * The standard deviation is not much different for June & December.  
   * This demonstrates that the temperature variance is similar for both months.
+  * Considering 95% of the data in a normal distribution (assumed here) is within ±2σ:
+    * June: 68.3-81.5°F
+    * December: 63.6-78.4°F
 
 ### Precipitation Analysis
 
-The descriptive statistics for Temperture data are shown in table format.<br>
+The descriptive statistics for Precipitation data are shown in table format.<br>
 
 
 ![](analysis/PrecipStats.PNG) 
@@ -66,16 +69,15 @@ One of the best ways to compare 2 sets of data is a bar chart.<br>
 
 #### Observations:
 
-* Mean amount of precipitation is 0.14 inches for June and 0.22 inches for December (almost double).  
+* Mean amount of precipitation is 0.14 inches for June and 0.22 inches for December (almost double)
 * According to:  [https://www.weathershack.com/static/ed-rain-measurement.html](https://www.weathershack.com/static/ed-rain-measurement.html)
-  * Rainfall rate is generally described as light, moderate or heavy. Light rainfall is considered less than 0.10 inches of rain per hour. Moderate rainfall measures 0.10 to 0.30 inches of rain per hour. Heavy rainfall is more than 0.30 inches of rain per hour.*
+  * *Rainfall rate is generally described as light, moderate or heavy. Light rainfall is considered less than 0.10 inches of rain per hour. Moderate rainfall measures 0.10 to 0.30 inches of rain per hour. Heavy rainfall is more than 0.30 inches of rain per hour.*
 * With that information, we can say that most of the rain events in these 2 months would be classified as light rainfall.
-* December has a higher standard deviation, which demonstrates more variance 
-* This is supported by looking at the max values for June (4.43") and December (6.42") as compared to the 3rd quartile (0.12" and 0.15" respectively)
+* December has a higher standard deviation, which demonstrates more variance.  This is supported by looking at the max values for June (4.43") and December (6.42") as compared to the 3rd quartile (0.12" and 0.15" respectively)
 * So, most of the data for both months are less than or equal to (0.12" and 0.15" respectively). 
 * Because the 3rd quartiles are so similar and the max values so far apart, you can see why the mean and standard deviation are higher in December.  
 * Therefore, there is a greater chance for heavier rainfall in December as compared to June, but most of the days will have a similar amount of rainfall.
-* It also seems that most surfers will not care if it is raining or not, but there may be less business on the ice cream side.  
+* It also seems that most surfers would not mind the rain too much, but there may be less business on the ice cream side.  
 
 ## Recommendations for Future Analysis
 
